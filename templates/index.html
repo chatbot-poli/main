@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatBot</title>
-    <link rel="icon" type="image/jpg" href="bot.jpg">
+    <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='bot.jpg') }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
     <style>
@@ -224,7 +224,7 @@
     <div class="chat-container">
         <div class="chat-box" id="chat-box">
             <div class="message-container bot-message">
-                <img src="bot.jpg" class="profile-pic" alt="Bot">
+                <img src="{{ url_for('static', filename='bot.jpg') }}" alt="Bot">
                 <div class="message bot">Hola, ¿en qué puedo ayudarte?</div>
             </div>
         </div>
@@ -246,7 +246,7 @@
         userMessageContainer.classList.add("message-container", "user-message");
 
         let userProfilePic = document.createElement("img");
-        userProfilePic.src = "user.jpg";
+        userProfilePic.src = "/static/user.jpg";
         userProfilePic.classList.add("profile-pic");
         userProfilePic.alt = "Usuario";
 
@@ -263,7 +263,7 @@
         typingContainer.id = "typing-indicator";
 
         let botPic = document.createElement("img");
-        botPic.src = "bot.jpg";
+        botPic.src = "/static/bot.jpg";
         botPic.classList.add("profile-pic");
 
         let dots = document.createElement("div");
@@ -288,7 +288,7 @@
             botMessageContainer.classList.add("message-container", "bot-message");
 
             let botProfilePic = document.createElement("img");
-            botProfilePic.src = "bot.jpg";
+            botProfilePic.src = "/static/user.jpg";
             botProfilePic.classList.add("profile-pic");
             botProfilePic.alt = "Bot";
 
