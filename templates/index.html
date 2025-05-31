@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatBot</title>
     <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='bot.jpg') }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
@@ -198,6 +197,8 @@
         @media screen and (max-width: 768px) {
             .suggestions-container {
                 display: none;
+                width: 0;
+                flex: 0 0 0;
             }
 
             .chat-box, .input-container {
@@ -213,7 +214,7 @@
 
             .page-layout {
                 display: flex;
-                flex-direction: row;
+                flex-direction: colum;
                 height: 100%; /* en vez de 100vh */
             }
 
