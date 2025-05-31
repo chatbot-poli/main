@@ -6,7 +6,8 @@
     <title>ChatBot</title>
     <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='bot.jpg') }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -199,12 +200,32 @@
                 display: none;
             }
 
-            .chat-box,
-            .input-container {
+            .chat-box, .input-container {
                 margin: 0 auto;
                 max-width: 100%;
                 padding: 10px;
             }
+            .page-layout {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+            .chat-container {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            .suggestions-container {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #333;
+            }
+            html, body {
+                height: 100dvh;
+                overflow: hidden;
+            }
+            
+
         }
     </style>
 </head>
